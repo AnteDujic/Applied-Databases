@@ -1,0 +1,4 @@
+MATCH (s:Sport)<-[:PLAYS{position:"Midfield"}]-(p:Person)-[:PLAYS]->(i:Instrument)
+WHERE s.name="Soccer" or s.name="Football"
+RETURN i.name as Instruments, p.name as Person
+ORDER BY Instruments, Person

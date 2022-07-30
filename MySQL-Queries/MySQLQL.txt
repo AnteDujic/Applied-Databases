@@ -1,0 +1,11 @@
+SELECT c.name, c.population, p.personname
+FROM hasvisitedcity h
+LEFT JOIN city c
+ON h.cityid = c.id
+LEFT JOIN person p
+ON h.personid = p.personid
+WHERE c.population > (
+	SELECT MAX(population) 
+	FROM country
+	WHERE region = "Polynesia")
+ORDER BY c.name;

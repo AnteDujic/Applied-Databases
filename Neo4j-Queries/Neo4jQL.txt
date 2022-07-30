@@ -1,0 +1,3 @@
+MATCH (p:Person)
+WHERE p.salary < 50000
+RETURN COLLECT(toInteger(ROUND(p.salary))) as Salaries_LT_50k

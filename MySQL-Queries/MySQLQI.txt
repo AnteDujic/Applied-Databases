@@ -1,0 +1,12 @@
+SELECT ci.name, ci.population
+FROM city ci
+INNER JOIN country c
+ON ci.countrycode = c.code
+WHERE c.headofstate = "Harald V"
+AND ci.population > (
+	SELECT AVG (ci1.population)
+	FROM city ci1
+	INNER JOIN country c1
+	ON ci1.countrycode = c1.code
+	WHERE c1.headofstate = "Harald V")
+ORDER BY ci.name, ci.population ASC;

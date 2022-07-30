@@ -1,0 +1,8 @@
+SELECT Continent, Name, Population
+FROM country
+WHERE Population > 0
+AND Population IN (
+	SELECT MAX(Population) 
+	FROM country 
+	GROUP BY Continent)
+ORDER BY Population DESC, Continent;

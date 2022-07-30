@@ -1,0 +1,4 @@
+MATCH (p:Person{name:"Tom Smith"})
+<-[:FATHER_OF|MOTHER_OF*2]-(gp:Person)-[:FATHER_OF|MOTHER_OF*2]->(c:Person)
+RETURN DISTINCT  c.name AS Cousin, c.salary AS Salary
+ORDER BY Cousin, Salary ASC
