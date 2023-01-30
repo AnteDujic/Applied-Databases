@@ -11,7 +11,9 @@ This repository is created as a project for Applied Databases module on ATU, Ire
 ### :file_folder: 1. MYSQL-Queries
 <hr style="border:2px solid gray"> </hr>
 
-This folder contains SQL Queries written to solve the problems given in *Final Project Specification 2022.pdf". Two examples are given below:
+This folder contains SQL Queries written to solve the problems given in *Questions.pdf". Two examples are given below:
+
+1. Show the Name and LifeExpectancy of all countries in “North America” where the country’s LifeExpectancy is the maximum LifeExpectancy for countries in “North America”.
 
 ```sql
 SELECT Name, LifeExpectancy 
