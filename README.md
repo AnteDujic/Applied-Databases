@@ -58,10 +58,12 @@ RETURN i.name as Instruments, p.name as Person
 ORDER BY Instruments, Person
 ```
 
-2. 
+2. Return the list of salaries of people who are less than 50,000 (as Salaries_LT_50k). The salaries should be rounded up or down to the nearest whole number. 
 
 ```sql
-
+MATCH (p:Person)
+WHERE p.salary < 50000
+RETURN COLLECT(toInteger(ROUND(p.salary))) as Salaries_LT_50k
 ```
 
 ### :file_folder: 3. PythonApp
