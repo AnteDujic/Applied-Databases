@@ -79,4 +79,13 @@ Employees
 
 MENU
 ====
+1 - View Employees & Departments
+2 - View Salary Details
+3 - View by Month of Birth
+4 - Add New Employee
+5 - View Departments managed by Employee
+6 - Add Manager to Department
+7 - View Departments
+x - Exit application
+Choice:   
 ```
