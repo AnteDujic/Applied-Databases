@@ -26,9 +26,43 @@ AND LifeExpectancy = (
 ORDER BY Name;
 ```
 
+
+2. Show Name, Population and PersonName of all cities visited by people, where the city population is greater than the maximum population of “Polynesia”.
+
+```sql
+SELECT c.name, c.population, p.personname
+FROM hasvisitedcity h
+LEFT JOIN city c
+ON h.cityid = c.id
+LEFT JOIN person p
+ON h.personid = p.personid
+WHERE c.population > (
+	SELECT MAX(population) 
+	FROM country
+	WHERE region = "Polynesia")
+ORDER BY c.name;
+```
+
 ### :file_folder: 2. Neo4j-Queries
 <hr style="border:2px solid gray"> </hr>
 
+This folder contains Neo4j Queries written to solve the problems given in *Questions.pdf". Two examples are given below:
+
+1. Return the names of instruments (as Instruments) people play, and the names of people (as Person) who play those instruments, only for people who play Midfield position in either Football or Soccer.
+Results should be in alphabetical instrument name, and within that alphabetically by person name.
+
+```sql
+MATCH (s:Sport)<-[:PLAYS{position:"Midfield"}]-(p:Person)-[:PLAYS]->(i:Instrument)
+WHERE s.name="Soccer" or s.name="Football"
+RETURN i.name as Instruments, p.name as Person
+ORDER BY Instruments, Person
+```
+
+2. 
+
+```sql
+
+```
 
 ### :file_folder: 3. PythonApp
 <hr style="border:2px solid gray"> </hr>
