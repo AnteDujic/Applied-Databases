@@ -46,7 +46,7 @@ ORDER BY c.name;
 ### :file_folder: 2. Neo4j-Queries
 <hr style="border:2px solid gray"> </hr>
 
-This folder contains Neo4j Queries written to solve the problems given in *Questions.pdf". Two examples are given below:
+This folder contains Neo4j Queries written to solve the problems given in *Questions.pdf*. Two examples are given below:
 
 1. Return the names of instruments (as Instruments) people play, and the names of people (as Person) who play those instruments, only for people who play Midfield position in either Football or Soccer.
 Results should be in alphabetical instrument name, and within that alphabetically by person name.
@@ -69,4 +69,14 @@ RETURN COLLECT(toInteger(ROUND(p.salary))) as Salaries_LT_50k
 ### :file_folder: 3. PythonApp
 <hr style="border:2px solid gray"> </hr>
 
-This folder contains an application written in Python that manipulates SQL and Neo4j databases. The application functionality is created based on the instructions from *Final Project Specification 2022.pdf*. All the queries are contained withing the *choices.py* file. 
+This folder contains an application written in Python that manipulates SQL and Neo4j databases. The application functionality is created based on the instructions from *Final Project Specification 2022.pdf*. All the queries are contained withing the *choices.py* file. Some exaples are given below.
+
+Write a python application that displays a main menu as follows:
+
+```console
+Employees
+---------
+
+MENU
+====
+```
