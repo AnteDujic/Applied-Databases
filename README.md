@@ -11,7 +11,7 @@ This repository is created as a project for Applied Databases module on ATU, Ire
 ### :file_folder: 1. MYSQL-Queries
 <hr style="border:2px solid gray"> </hr>
 
-This folder contains SQL Queries written to solve the problems given in *Questions.pdf". Two examples are given below:
+This folder contains SQL Queries written to solve the problems given in *Questions.pdf*. Two examples are given below:
 
 1. Show the Name and LifeExpectancy of all countries in “North America” where the country’s LifeExpectancy is the maximum LifeExpectancy for countries in “North America”.
 
@@ -68,3 +68,5 @@ RETURN COLLECT(toInteger(ROUND(p.salary))) as Salaries_LT_50k
 
 ### :file_folder: 3. PythonApp
 <hr style="border:2px solid gray"> </hr>
+
+This folder contains an application written in Python that manipulates SQL and Neo4j databases. The application functionality is created based on the instructions from *Final Project Specification 2022.pdf*. All the queries are contained withing the *choices.py* file. 
