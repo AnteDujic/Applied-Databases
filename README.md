@@ -69,9 +69,9 @@ RETURN COLLECT(toInteger(ROUND(p.salary))) as Salaries_LT_50k
 ### :file_folder: 3. PythonApp
 <hr style="border:2px solid gray"> </hr>
 
-This folder contains an application written in Python that manipulates SQL and Neo4j databases. The application functionality is created based on the instructions from *Final Project Specification 2022.pdf*. All the queries are contained withing the *choices.py* file. Some exaples are given below.
+This folder contains an application written in Python that manipulates SQL and Neo4j databases. The application functionality is created based on the instructions from *Final Project Specification 2022.pdf*. Some examples are given below.
 
-Write a python application that displays a main menu as follows:
+Python application displays a main menu as follows:
 
 ```console
 Employees
@@ -89,3 +89,14 @@ MENU
 x - Exit application
 Choice:   
 ```
+
+1. Choice 1
+
+The user is shown the list of Employee Names (in alphabetical order) and the Names of the Department each employee works in, in groups of 2. If the user presses any key except q the next 2 Employees and their Department are shown. And so on until the user presses q. Whenever the user presses q he/she is returned to the Main Menu.
+
+2. Choice 6
+
+The user is asked to enter an Employee ID and a Department ID.
+When both are entered, the Neo4j database is updated to show that that employee now manages that department. If an Employee ID and/or Department ID is entered that does not exist in the MySQL database (employees), then an error message(s) is printed, and the user is prompted to enter a new Employee ID and Department ID. If a Department ID is entered that is already managed by another Employee, an error message should be shown. It is possible for an Employee to manage many Departments.
+
+Menu functionalites are contained within *pythonApp.py* and all the SQL and Neo4j queries are contained withing the *choices.py* file. 
